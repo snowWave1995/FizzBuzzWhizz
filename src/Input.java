@@ -5,8 +5,9 @@ import java.util.Scanner;
  * Created by SnowWave on 2017/6/23.
  */
 public class Input {
-    private static int[] threeNumber = new int[3];
-    public static void  getThreeNumber(){
+
+    public static int[]  getThreeNumber(){
+        int[] threeNumber = new int[3];
         Scanner in = new Scanner(System.in);
         int n1 = in.nextInt();
         int n2 = in.nextInt();
@@ -14,20 +15,21 @@ public class Input {
         if(legalInput(n1)){
             threeNumber[0] = n1;
         }else {
-            System.out.println("不合法输入");
+           throw new IllegalArgumentException("第一个数是不合法输入");
         }
         if(legalInput(n2)){
             threeNumber[1] = n2;
         }else {
-            System.out.println("不合法输入");
+            throw new IllegalArgumentException("第二个数是不合法输入");
         }
         if(legalInput(n3)){
             threeNumber[2] = n3;
         }else {
-            System.out.println("不合法输入");
+            throw new IllegalArgumentException("第三个数是不合法输入");
         }
-
+        return threeNumber;
     }
+
     public static boolean legalInput(int n){
         if(n>0 && n<10){
             return true;

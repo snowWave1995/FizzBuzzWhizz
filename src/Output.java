@@ -1,17 +1,19 @@
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by SnowWave on 2017/6/23.
  */
 public class Output {
-    public static void print(ArrayList<Object> list){
+    public static void print(List<Object> list){
         for (Object output: list
              ) {
             System.out.println(output);
         }
     }
+
     @Test
     public  void testPrint(){
         ArrayList<Object> list = new ArrayList<>();
