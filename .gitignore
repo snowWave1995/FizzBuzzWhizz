@@ -1,7 +1,7 @@
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+*.class
 
 out/
+
+.idea/
+/idea/
+*.iml
